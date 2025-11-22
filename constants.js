@@ -5,7 +5,7 @@ export const BOOK_CONTENT = [
   {
     id: 0,
     type: PageType.COVER,
-    title: "고백",
+    title: "自我受容錄",
     subtitle: "",
     content: ""
   },

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 수필</title>
+    <!-- Import Diphylleia Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['Batang', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
+              sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+              diphylleia: ['Diphylleia', 'serif'],
+            },
+            colors: {
+              paper: '#fdfbf7',
+              ink: '#292524',
+            }
+          }
+        },
+        plugins: [
+          function({ addUtilities }) {
+            const newUtilities = {
+              '.vertical-rl': {
+                'writing-mode': 'vertical-rl',
+              },
+              '.text-orientation-mixed': {
+                'text-orientation': 'mixed',
+              },
+              '.text-orientation-upright': {
+                'text-orientation': 'upright',
+              },
+            }
+            addUtilities(newUtilities)
+          }
+        ]
+      }
+    </script>
+    <style>
+      /* Custom scrollbar hiding for a cleaner look */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-stone-100 text-ink antialiased overflow-hidden">
+    <div id="root"></div>
+    <!-- Entry Point -->
+    <script type="module" src="./index.js"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

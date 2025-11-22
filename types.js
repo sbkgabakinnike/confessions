@@ -1,0 +1,9 @@
+export const PageType = {
+  COVER: 'COVER',
+  PROLOGUE: 'PROLOGUE',
+  DEDICATION: 'DEDICATION',
+  BODY: 'BODY',
+  EPILOGUE: 'EPILOGUE',
+  AUTHOR_NOTE: 'AUTHOR_NOTE',
+  POEM: 'POEM',
+};
